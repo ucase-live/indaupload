@@ -1,5 +1,5 @@
 {
-    "name": "ucase-live/woocommerce",
+    "name": "ucase-live/indaupload",
     "type": "ucase-live",
     "require": {
         "backyardwp/framework": "^0.1.0"
