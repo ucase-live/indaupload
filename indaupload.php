@@ -57,18 +57,21 @@ $indauploadPlugin->boot(
 
                 }
                 ?>
-                <form method='post' action='' name='myform' enctype='multipart/form-data'>
-                    <table>
-                        <tr>
-                            <td>Upload file</td>
-                            <td><input type='file' name='file'></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><input type='submit' name='submit_upload' value='Загрузить файл формата CSV'></td>
-                        </tr>
-                    </table>
-                </form>
+                <div class="wrap">
+                    <h2>Загрузка файла импорта сотрудников и их баллов</h2>
+                    <form method='post' action='' name='myform' enctype='multipart/form-data'>
+                        <table>
+                            <tr>
+                                <td>Upload file</td>
+                                <td><input type='file' name='file'></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type='submit' name='submit_upload' value='Загрузить файл формата CSV'></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
                 <?php
             }
         }
