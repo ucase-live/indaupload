@@ -1,5 +1,17 @@
 {
+    "name": "ucase-live/woocommerce",
+    "type": "ucase-live",
     "require": {
         "backyardwp/framework": "^0.1.0"
+    },
+    "autoload": {
+        "classmap": [
+            "includes"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x.x"
+        }
     }
 }
