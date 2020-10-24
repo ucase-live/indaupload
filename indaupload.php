@@ -48,7 +48,7 @@ $indauploadPlugin->boot(
                         $imageurl = "";
                         if ( $movefile && ! isset( $movefile['error'] ) ) {
                             $upload_dir = wp_upload_dir();
-                            rename($movefile['file'], $upload_dir['basedir']  . WPALLIMPORT_POINTS_PATH . 'points.csv');
+                            rename($movefile['file'], WPALLIMPORT_POINTS_PATH);
                             echo "Файл успешно загружен и будет импортирован автоматически по расписанию.";
                         } else {
                             echo $movefile['error'];
