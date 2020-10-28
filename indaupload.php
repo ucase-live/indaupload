@@ -36,7 +36,8 @@ $indauploadPlugin->boot(
     function( $plugin ) {
         add_action('admin_head', 'admin_stylesheet_tailwindcss');
         function admin_stylesheet_tailwindcss() {
-            wp_enqueue_style("style-admin-tailwindcss", 'https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css');
+            wp_enqueue_style("style-admin-tailwindcss-components", 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/components.min.css');
+            wp_enqueue_style("style-admin-tailwindcss-utilities", 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/utilities.min.css');
         }
 
         add_action('admin_menu', 'my_admin_menu');
