@@ -36,8 +36,7 @@ $indauploadPlugin->boot(
     function( $plugin ) {
         add_action('admin_head', 'admin_stylesheet_tailwindcss');
         function admin_stylesheet_tailwindcss() {
-            wp_enqueue_style("style-admin-tailwindcss-components", 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/components.min.css');
-            wp_enqueue_style("style-admin-tailwindcss-utilities", 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/utilities.min.css');
+            wp_enqueue_style("style-admin-tailwindcss-utilities", plugins_url( 'css/wpt.css', __FILE__ ));
         }
 
         add_action('admin_menu', 'my_admin_menu');
@@ -45,7 +44,7 @@ $indauploadPlugin->boot(
             add_menu_page('Импорт баллов', 'Импорт баллов', 'edit_others_posts', 'import-points.php', 'print_page_function');
             function print_page_function() {
                 ?>
-                <div class="wrap">
+                <div class="wrap wpt">
                     <h2>Загрузка файла импорта сотрудников и их баллов</h2>
                     <form class="mt-8" method='post' action='' name='myform' enctype='multipart/form-data'>
                         <div class="w-64 flex flex-wrap items-center justify-center bg-grey-lighter">
